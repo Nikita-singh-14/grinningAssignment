@@ -198,7 +198,7 @@ export default function Home() {
               A calmer kind of energy
             </div>
 
-            <h1 className="max-w-3xl text-5xl font-black leading-[0.92] tracking-tight md:text-7xl lg:text-8xl">
+            <h1 className="max-w-3xl text-2xl font-black leading-[0.92] tracking-tight md:text-7xl lg:text-8xl">
               What if your energy drink helped you{" "}
               <span className="text-[#f28c8c]">do nothing?</span>
             </h1>
