@@ -1,31 +1,20 @@
 "use client";
-<<<<<<< HEAD
 
 import { useState } from "react";
 
 const benefits = [
   {
     icon: "◌",
-=======
-const benefits = [
-  {
->>>>>>> 4384b04 (build slow-bull landing page)
     title: "Unplug naturally",
     text: "A gentle evening ritual for closing your laptop and letting the day become quieter.",
   },
   {
-<<<<<<< HEAD
     icon: "☁",
-=======
->>>>>>> 4384b04 (build slow-bull landing page)
     title: "Rest without pressure",
     text: "No intense formulas or artificial hype—just a calm drink for your wind-down routine.",
   },
   {
-<<<<<<< HEAD
     icon: "✦",
-=======
->>>>>>> 4384b04 (build slow-bull landing page)
     title: "Make space for slow",
     text: "Enjoy it while reading, stretching, journaling, or doing absolutely nothing.",
   },
@@ -36,27 +25,20 @@ const reviews = [
     quote:
       "I used to reach for another coffee at 6 PM. Now I reach for Slow Bull and actually sleep on time.",
     author: "Ananya, Bengaluru",
-<<<<<<< HEAD
     initials: "A",
     color: "bg-[#f28c8c]",
-=======
->>>>>>> 4384b04 (build slow-bull landing page)
   },
   {
     quote:
       "The packaging feels like a deep breath. The lavender lemon flavour is my new reading companion.",
     author: "Kabir, Mumbai",
-<<<<<<< HEAD
     initials: "K",
     color: "bg-[#b8a7e8]",
-=======
->>>>>>> 4384b04 (build slow-bull landing page)
   },
   {
     quote:
       "It is a fun idea, but the page also feels genuinely premium and usable.",
     author: "Meera, Delhi",
-<<<<<<< HEAD
     initials: "M",
     color: "bg-[#f4d58d]",
   },
@@ -65,37 +47,34 @@ const reviews = [
 const flavours = [
   {
     name: "Lavender Lemon",
-    description: "Soft floral notes with a bright citrus finish.",
     color: "bg-[#b8a7e8]",
     accent: "text-[#6d5c9e]",
     symbol: "☾",
   },
   {
     name: "Berry Mint",
-    description: "A cool, comforting blend for slower evenings.",
     color: "bg-[#f28c8c]",
     accent: "text-[#9d3e54]",
     symbol: "✦",
   },
   {
     name: "Chamomile Peach",
-    description: "A mellow, golden sip for winding down.",
     color: "bg-[#fff7e6]",
     accent: "text-[#b27038]",
     symbol: "☁",
-=======
->>>>>>> 4384b04 (build slow-bull landing page)
   },
 ];
 
 export default function Home() {
-<<<<<<< HEAD
   const [menuOpen, setMenuOpen] = useState(false);
   const [cartMessage, setCartMessage] = useState("");
 
   const addToCart = () => {
     setCartMessage("Night sampler added — your slow evening is on its way.");
-    window.setTimeout(() => setCartMessage(""), 3500);
+
+    window.setTimeout(() => {
+      setCartMessage("");
+    }, 3500);
   };
 
   return (
@@ -104,7 +83,7 @@ export default function Home() {
         className={`fixed right-5 top-5 z-[60] max-w-sm rounded-2xl border border-white/10 bg-[#fff7e6] px-5 py-4 text-sm font-bold text-[#111827] shadow-2xl transition-all duration-500 ${
           cartMessage
             ? "translate-y-0 opacity-100"
-            : "-translate-y-8 opacity-0 pointer-events-none"
+            : "-translate-y-8 pointer-events-none opacity-0"
         }`}
         aria-live="polite"
       >
@@ -119,17 +98,10 @@ export default function Home() {
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#f28c8c] text-sm text-[#111827] transition-transform duration-300 group-hover:rotate-12">
             ☾
           </span>
-=======
-  return (
-    <main className="min-h-screen bg-[#111827] text-[#fff7e6]">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
-        <a href="#top" className="text-xl font-black tracking-[0.2em]">
->>>>>>> 4384b04 (build slow-bull landing page)
           SLOW BULL
         </a>
 
         <div className="hidden items-center gap-8 text-sm text-[#d8d2e8] md:flex">
-<<<<<<< HEAD
           <a className="nav-link" href="#benefits">
             Benefits
           </a>
@@ -167,21 +139,21 @@ export default function Home() {
       {menuOpen && (
         <div className="fixed inset-x-4 top-20 z-40 rounded-3xl border border-white/10 bg-[#1d2940]/95 p-6 shadow-2xl backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-5 text-lg font-bold">
-            <a onClick={() => setMenuOpen(false)} href="#benefits">
+            <a href="#benefits" onClick={() => setMenuOpen(false)}>
               Benefits
             </a>
-            <a onClick={() => setMenuOpen(false)} href="#flavours">
+            <a href="#flavours" onClick={() => setMenuOpen(false)}>
               Flavours
             </a>
-            <a onClick={() => setMenuOpen(false)} href="#reviews">
+            <a href="#reviews" onClick={() => setMenuOpen(false)}>
               Reviews
             </a>
-            <a onClick={() => setMenuOpen(false)} href="#faq">
+            <a href="#faq" onClick={() => setMenuOpen(false)}>
               FAQ
             </a>
             <a
-              onClick={() => setMenuOpen(false)}
               href="#flavours"
+              onClick={() => setMenuOpen(false)}
               className="rounded-full bg-[#f28c8c] px-5 py-3 text-center text-[#111827]"
             >
               Try the sampler
@@ -289,6 +261,7 @@ export default function Home() {
                   }`}
                 >
                   <div className="absolute inset-x-0 top-0 h-16 bg-white/20" />
+
                   <span className="relative text-[10px] font-black tracking-[0.2em] md:text-xs">
                     SLOW BULL
                   </span>
@@ -316,89 +289,10 @@ export default function Home() {
             <p className="absolute bottom-0 text-sm text-[#d8d2e8]">
               Your favourite can, redesigned for the night.
             </p>
-=======
-          <a href="#benefits">Benefits</a>
-          <a href="#flavours">Flavours</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#faq">FAQ</a>
-        </div>
-
-        <a
-          href="#flavours"
-          className="rounded-full bg-[#b8a7e8] px-5 py-3 text-sm font-bold text-[#111827]"
-        >
-          Try the sampler
-        </a>
-      </nav>
-
-      <section
-        id="top"
-        className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:px-10 lg:py-32"
-      >
-        <div>
-          <p className="mb-5 text-sm font-bold uppercase tracking-[0.25em] text-[#b8a7e8]">
-            A calmer kind of energy
-          </p>
-
-          <h1 className="max-w-3xl text-5xl font-black leading-[0.95] tracking-tight md:text-7xl">
-            What if your energy drink helped you do nothing?
-          </h1>
-
-          <p className="mt-8 max-w-xl text-lg leading-8 text-[#d8d2e8]">
-            Meet Slow Bull: a caffeine-free evening drink made for quiet
-            moments, slow mornings, and people who are ready to stop running
-            on empty.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="#flavours"
-              className="rounded-full bg-[#f28c8c] px-6 py-4 font-bold text-[#111827]"
-            >
-              Try the sampler
-            </a>
-            <a
-              href="#benefits"
-              className="rounded-full border border-[#6e6686] px-6 py-4 font-bold"
-            >
-              Explore the ritual
-            </a>
-          </div>
-        </div>
-
-        <div className="relative flex min-h-420px items-center justify-center overflow-hidden rounded-2rem bg-gradient-to-br from-[#253451] via-[#50456f] to-[#b8a7e8] p-8">
-          <div className="absolute right-10 top-10 h-32 w-32 rounded-full bg-[#fff7e6]/70 blur-sm" />
-
-          <div className="relative flex items-end gap-3">
-            {["Lavender Lemon", "Berry Mint", "Chamomile Peach"].map(
-              (flavour, index) => (
-                <div
-                  key={flavour}
-                  className={`flex h-64 w-28 flex-col justify-between rounded-2xl p-4 text-[#111827] shadow-2xl ${
-                    index === 1
-                      ? "bg-[#f28c8c]"
-                      : index === 2
-                        ? "bg-[#fff7e6]"
-                        : "bg-[#b8a7e8]"
-                  }`}
-                >
-                  <span className="text-xs font-black tracking-widest">
-                    SLOW BULL
-                  </span>
-                  <div>
-                    <div className="mb-4 text-4xl">☾</div>
-                    <p className="text-sm font-bold">{flavour}</p>
-                    <p className="mt-2 text-xs">CAFFEINE-FREE</p>
-                  </div>
-                </div>
-              ),
-            )}
->>>>>>> 4384b04 (build slow-bull landing page)
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="border-y border-white/10 bg-[#0d1524]/80">
         <div className="mx-auto grid max-w-7xl gap-6 px-6 py-8 text-center text-sm font-medium text-[#d8d2e8] md:grid-cols-3 lg:px-10">
           <p className="flex items-center justify-center gap-2">
@@ -408,21 +302,14 @@ export default function Home() {
             <span className="text-[#f28c8c]">✦</span> Plant-based ingredients
           </p>
           <p className="flex items-center justify-center gap-2">
-            <span className="text-[#f4d58d]">✓</span> 30-day satisfaction guarantee
+            <span className="text-[#f4d58d]">✓</span> 30-day satisfaction
+            guarantee
           </p>
-=======
-      <section className="border-y border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 py-8 text-center text-sm text-[#d8d2e8] md:grid-cols-3 lg:px-10">
-          <p>100% caffeine-free</p>
-          <p>Plant-based ingredients</p>
-          <p>30-day satisfaction guarantee</p>
->>>>>>> 4384b04 (build slow-bull landing page)
         </div>
       </section>
 
       <section
         id="benefits"
-<<<<<<< HEAD
         className="relative mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32"
       >
         <div className="absolute left-0 top-1/2 -z-10 h-64 w-64 rounded-full bg-[#f28c8c]/10 blur-3xl" />
@@ -430,9 +317,11 @@ export default function Home() {
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b8a7e8]">
           The opposite of ordinary
         </p>
+
         <h2 className="mt-4 max-w-2xl text-4xl font-black leading-tight md:text-6xl">
           Less rush. More you.
         </h2>
+
         <p className="mt-6 max-w-xl leading-7 text-[#d8d2e8]">
           Slow Bull turns the “one more thing” part of your day into a small,
           intentional ritual you can look forward to.
@@ -447,31 +336,14 @@ export default function Home() {
               <div className="mb-12 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#fff7e6] text-3xl text-[#111827] shadow-lg transition duration-500 group-hover:rotate-12">
                 {benefit.icon}
               </div>
-              <h3 className="text-2xl font-bold">{benefit.title}</h3>
-              <p className="mt-4 leading-7 text-[#d8d2e8]">{benefit.text}</p>
-              <div className="mt-8 h-px w-0 bg-[#f28c8c] transition-all duration-500 group-hover:w-full" />
-=======
-        className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32"
-      >
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b8a7e8]">
-          The opposite of ordinary
-        </p>
-        <h2 className="mt-4 max-w-2xl text-4xl font-black md:text-6xl">
-          Less rush. More you.
-        </h2>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {benefits.map((benefit, index) => (
-            <article
-              key={benefit.title}
-              className="rounded-3xl border border-white/10 bg-white/5 p-7"
-            >
-              <div className="mb-12 text-4xl">
-                {["◌", "☁", "✦"][index]}
-              </div>
               <h3 className="text-2xl font-bold">{benefit.title}</h3>
-              <p className="mt-4 leading-7 text-[#d8d2e8]">{benefit.text}</p>
->>>>>>> 4384b04 (build slow-bull landing page)
+
+              <p className="mt-4 leading-7 text-[#d8d2e8]">
+                {benefit.text}
+              </p>
+
+              <div className="mt-8 h-px w-0 bg-[#f28c8c] transition-all duration-500 group-hover:w-full" />
             </article>
           ))}
         </div>
@@ -481,7 +353,6 @@ export default function Home() {
         id="flavours"
         className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 lg:grid-cols-2 lg:items-center lg:px-10 lg:pb-32"
       >
-<<<<<<< HEAD
         <div className="relative overflow-hidden rounded-[2rem] bg-[#fff7e6] p-8 text-[#111827] shadow-2xl md:p-12">
           <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#f4d58d]/60 blur-2xl" />
           <div className="absolute -bottom-20 -left-20 h-48 w-48 rounded-full bg-[#b8a7e8]/50 blur-2xl" />
@@ -490,9 +361,11 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#75669f]">
               The night sampler
             </p>
+
             <h2 className="mt-4 max-w-md text-4xl font-black leading-tight md:text-5xl">
               Six cans. Three calming flavours.
             </h2>
+
             <p className="mt-6 max-w-md leading-7 text-[#4b5563]">
               Chamomile Peach, Lavender Lemon, and Berry Mint—made for a
               better way to end the day.
@@ -505,6 +378,7 @@ export default function Home() {
               </div>
 
               <button
+                type="button"
                 onClick={addToCart}
                 className="rounded-full bg-[#111827] px-6 py-4 font-bold text-[#fff7e6] transition duration-300 hover:-translate-y-1 hover:bg-[#50456f] hover:shadow-xl"
               >
@@ -520,6 +394,7 @@ export default function Home() {
 
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#253451] p-8 md:p-12">
           <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-[#b8a7e8]/20 blur-3xl" />
+
           <p className="relative text-6xl animate-float">☾ ✦ ☁</p>
 
           <h3 className="relative mt-10 text-3xl font-black md:text-4xl">
@@ -551,47 +426,14 @@ export default function Home() {
               </span>
               Recyclable aluminium packaging
             </li>
-=======
-        <div className="rounded-2rem bg-[#fff7e6] p-8 text-[#111827] md:p-12">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#75669f]">
-            The night sampler
-          </p>
-          <h2 className="mt-4 text-4xl font-black md:text-5xl">
-            Six cans. Three calming flavours.
-          </h2>
-          <p className="mt-6 leading-7 text-[#4b5563]">
-            Chamomile Peach, Lavender Lemon, and Berry Mint—made for a better
-            way to end the day.
-          </p>
-
-          <div className="mt-8 flex items-end justify-between">
-            <div>
-              <p className="text-sm text-[#4b5563]">Sampler price</p>
-              <p className="text-4xl font-black">₹799</p>
-            </div>
-            <button className="rounded-full bg-[#111827] px-6 py-4 font-bold text-[#fff7e6]">
-              Add to cart
-            </button>
-          </div>
-        </div>
-
-        <div className="rounded-2rem bg-[#253451] p-8 md:p-12">
-          <p className="text-6xl">☾ ✦ ☁</p>
-          <h3 className="mt-10 text-3xl font-black">
-            Your evening, redesigned.
-          </h3>
-          <ul className="mt-6 space-y-4 text-[#d8d2e8]">
-            <li>✓ Six caffeine-free botanical drinks</li>
-            <li>✓ Three original relaxing flavours</li>
-            <li>✓ A screen-free evening ritual guide</li>
-            <li>✓ Recyclable aluminium packaging</li>
->>>>>>> 4384b04 (build slow-bull landing page)
           </ul>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section id="reviews" className="relative overflow-hidden bg-[#253451] px-6 py-24 lg:px-10 lg:py-32">
+      <section
+        id="reviews"
+        className="relative overflow-hidden bg-[#253451] px-6 py-24 lg:px-10 lg:py-32"
+      >
         <div className="absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-[#b8a7e8]/15 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl">
@@ -600,14 +442,6 @@ export default function Home() {
           </p>
 
           <h2 className="mt-4 max-w-2xl text-4xl font-black leading-tight md:text-6xl">
-=======
-      <section
-        id="reviews"
-        className="bg-[#253451] px-6 py-24 lg:px-10 lg:py-32"
-      >
-        <div className="mx-auto max-w-7xl">
-          <h2 className="max-w-2xl text-4xl font-black md:text-6xl">
->>>>>>> 4384b04 (build slow-bull landing page)
             Loved by people who are done scrolling.
           </h2>
 
@@ -615,11 +449,13 @@ export default function Home() {
             {reviews.map((review) => (
               <blockquote
                 key={review.author}
-<<<<<<< HEAD
                 className="rounded-3xl border border-white/10 bg-[#111827]/30 p-7 backdrop-blur-sm transition duration-500 hover:-translate-y-2 hover:bg-[#111827]/50"
               >
                 <div className="mb-7 text-[#f4d58d]">★★★★★</div>
-                <p className="leading-7 text-[#d8d2e8]">“{review.quote}”</p>
+
+                <p className="leading-7 text-[#d8d2e8]">
+                  “{review.quote}”
+                </p>
 
                 <div className="mt-8 flex items-center gap-3">
                   <div
@@ -627,16 +463,11 @@ export default function Home() {
                   >
                     {review.initials}
                   </div>
-                  <cite className="not-italic font-bold">— {review.author}</cite>
+
+                  <cite className="not-italic font-bold">
+                    — {review.author}
+                  </cite>
                 </div>
-=======
-                className="rounded-3xl bg-white/5 p-7"
-              >
-                <p className="leading-7 text-[#d8d2e8]">“{review.quote}”</p>
-                <cite className="mt-8 block not-italic font-bold">
-                  — {review.author}
-                </cite>
->>>>>>> 4384b04 (build slow-bull landing page)
               </blockquote>
             ))}
           </div>
@@ -644,19 +475,15 @@ export default function Home() {
       </section>
 
       <section id="faq" className="mx-auto max-w-4xl px-6 py-24 lg:py-32">
-<<<<<<< HEAD
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b8a7e8]">
           Good questions
         </p>
+
         <h2 className="mt-4 text-4xl font-black md:text-5xl">
-=======
-        <h2 className="text-4xl font-black md:text-5xl">
->>>>>>> 4384b04 (build slow-bull landing page)
           Frequently asked questions
         </h2>
 
         <div className="mt-10 space-y-4">
-<<<<<<< HEAD
           <details className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-[#b8a7e8]/50">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-5 font-bold">
               Is Slow Bull an official Red Bull product?
@@ -664,6 +491,7 @@ export default function Home() {
                 +
               </span>
             </summary>
+
             <p className="mt-4 max-w-2xl leading-7 text-[#d8d2e8]">
               No. Slow Bull is an independent fictional concept created only
               for a front-end development assignment. It is not affiliated with
@@ -678,6 +506,7 @@ export default function Home() {
                 +
               </span>
             </summary>
+
             <p className="mt-4 max-w-2xl leading-7 text-[#d8d2e8]">
               No. The concept is designed as a caffeine-free evening beverage
               for people who want to make their night routine feel calmer.
@@ -691,55 +520,31 @@ export default function Home() {
                 +
               </span>
             </summary>
+
             <p className="mt-4 max-w-2xl leading-7 text-[#d8d2e8]">
               The sampler includes Chamomile Peach, Lavender Lemon, and Berry
               Mint, with two cans of each flavour.
-=======
-          <details className="rounded-2xl border border-white/10 p-6">
-            <summary className="cursor-pointer font-bold">
-              Is Slow Bull an official Red Bull product?
-            </summary>
-            <p className="mt-4 leading-7 text-[#d8d2e8]">
-              No. Slow Bull is an independent fictional concept created for a
-              front-end development assignment.
-            </p>
-          </details>
-
-          <details className="rounded-2xl border border-white/10 p-6">
-            <summary className="cursor-pointer font-bold">
-              Does Slow Bull contain caffeine?
-            </summary>
-            <p className="mt-4 leading-7 text-[#d8d2e8]">
-              No. The concept is designed as a caffeine-free evening beverage.
-            </p>
-          </details>
-
-          <details className="rounded-2xl border border-white/10 p-6">
-            <summary className="cursor-pointer font-bold">
-              What flavours are included?
-            </summary>
-            <p className="mt-4 leading-7 text-[#d8d2e8]">
-              The sampler includes Chamomile Peach, Lavender Lemon, and Berry
-              Mint.
->>>>>>> 4384b04 (build slow-bull landing page)
             </p>
           </details>
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="mx-6 mb-16 overflow-hidden rounded-[2rem] border border-[#f28c8c]/30 bg-gradient-to-br from-[#50456f] via-[#394563] to-[#1c2940] px-6 py-16 text-center shadow-2xl lg:mx-10">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4d58d]">
           Your sign to slow down
         </p>
+
         <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-tight md:text-6xl">
           Give your evening a different kind of boost.
         </h2>
+
         <p className="mx-auto mt-6 max-w-xl leading-7 text-[#d8d2e8]">
           Make room for tea, books, quiet playlists, deep breaths, and doing
           less on purpose.
         </p>
+
         <button
+          type="button"
           onClick={addToCart}
           className="mt-10 rounded-full bg-[#f28c8c] px-7 py-4 font-bold text-[#111827] shadow-xl shadow-[#111827]/30 transition duration-300 hover:-translate-y-1 hover:bg-[#fff7e6]"
         >
@@ -753,11 +558,6 @@ export default function Home() {
         </p>
         <p className="mt-3">Your day did enough. Now let it slow down.</p>
         <p className="mt-3 text-xs">
-=======
-      <footer className="border-t border-white/10 px-6 py-10 text-center text-sm text-[#a9a4b8]">
-        <p>SLOW BULL — Your day did enough. Now let it slow down.</p>
-        <p className="mt-3">
->>>>>>> 4384b04 (build slow-bull landing page)
           Independent fictional concept. Not affiliated with Red Bull GmbH.
         </p>
       </footer>
