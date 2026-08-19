@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+:root {
+  --background: #111827;
+  --foreground: #fff7e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #f28c8c;
+  color: #111827;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #fff7e6;
+}
+
+.nav-link::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f28c8c;
+  content: "";
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.can-card {
+  position: relative;
+  display: flex;
+  height: 260px;
+  width: 92px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  color: #111827;
+  box-shadow:
+    18px 20px 30px rgba(0, 0, 0, 0.25),
+    inset 2px 0 0 rgba(255, 255, 255, 0.35);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.can-card::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 12px;
+  width: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.38);
+  content: "";
+  filter: blur(1px);
+}
+
+.can-card:hover {
+  z-index: 20;
+  transform: translateY(-18px) rotate(2deg);
+  box-shadow:
+    22px 28px 38px rgba(0, 0, 0, 0.35),
+    inset 2px 0 0 rgba(255, 255, 255, 0.4);
+}
+
+.can-featured {
+  height: 310px;
+  transform: translateY(-16px);
+}
+
+.can-featured:hover {
+  transform: translateY(-34px) rotate(-2deg);
+}
+
+.star {
+  position: absolute;
+  color: #fff7e6;
+  font-size: 1rem;
+  opacity: 0.55;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.star:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.star:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.star:nth-child(4) {
+  animation-delay: 1.8s;
+}
+
+.star:nth-child(5) {
+  animation-delay: 2.4s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+@keyframes floatDelayed {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(18px) rotate(-3deg);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    transform: scale(0.75);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.85;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatDelayed 8s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fadeUp 0.8s 0.18s ease-out both;
+}
+
+@media (max-width: 640px) {
+  .can-card {
+    height: 210px;
+    width: 72px;
+    padding: 0.75rem;
+  }
+
+  .can-featured {
+    height: 250px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
